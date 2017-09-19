@@ -11,7 +11,7 @@ endfunction
 
 " Detect files with the Dope shebang.
 function! s:DetectDope()
-  if getline(1) =~ '^#!.*\<dope\>'
+  if getline(1) =~# '^#!.*\<dope\>'
     call s:setf('dope')
   endif
 endfunction
