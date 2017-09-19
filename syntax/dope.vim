@@ -3,8 +3,8 @@ if exists('b:current_syntax')
   finish
 endif
 
-let s:cpo_save = &cpo
-set cpo&vim
+let s:cpo_save = &cpoptions
+set cpoptions&vim
 
 let b:current_syntax = 'dope'
 
@@ -16,5 +16,5 @@ highlight link dopeKeyword Keyword
 syntax match dopeComment "\v#.*$"
 highlight link dopeComment Comment
 
-let &cpo = s:cpo_save
+let &cpoptions = s:cpo_save
 unlet s:cpo_save
